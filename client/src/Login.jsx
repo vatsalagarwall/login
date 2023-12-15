@@ -14,7 +14,11 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://login-server-flax.vercel.app/login", { email, password })
+      .post(
+        "https://login-server-flax.vercel.app/login",
+        { email, password },
+        { withCredentials: true }
+      )
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
