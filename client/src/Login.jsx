@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://login-ebon-tau.vercel.app/login", { email, password })
+      .post("https://login-server-flax.vercel.app/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {

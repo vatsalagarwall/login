@@ -13,7 +13,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://login-ebon-tau.vercel.app/register", {
+      .post("https://login-server-flax.vercel.app//register", {
         name,
         email,
         password,
