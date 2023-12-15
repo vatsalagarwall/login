@@ -7,10 +7,10 @@ const path = require("path");
 const app = express()
 
 app.use(cors({
-    origin: ["https://login-client-six.vercel.app/"],
+    origin: "*",
     methods: ["POST", "GET"],
     credentials: true
-}))
+}));
 
 app.use(express.json())
 
