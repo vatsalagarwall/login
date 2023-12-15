@@ -7,13 +7,17 @@ function Signup() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-
+  axios.defaults.withCredentials = true;
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${window.location.origin}/register`, { name, email, password })
+      .post("https://login-ebon-tau.vercel.app/register", {
+        name,
+        email,
+        password,
+      })
       .then((result) => {
         console.log(result);
         navigate("/home");

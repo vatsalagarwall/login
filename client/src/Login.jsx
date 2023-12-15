@@ -8,13 +8,13 @@ function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [redirectToHome, setRedirectToHome] = useState(false);
-
+  axios.defaults.withCredentials = true;
   //   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${window.location.origin}/login`, { email, password })
+      .post("https://login-ebon-tau.vercel.app/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
