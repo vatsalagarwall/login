@@ -18,7 +18,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/login-register-employees")
 
 
 app.get("/", (req, res) => {
-
+    res.json("Hello")
 })
 
 app.post("/login", (req, res) => {
